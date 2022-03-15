@@ -1,0 +1,76 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shaggy Axel | Contacts</title>
+    <link rel="stylesheet" href='{% static "css/style.css" %}'/>
+    <link rel="stylesheet" href='{% static "css/email.css" %}'/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <img src="{% static 'img/profile_photo.png' %}" alt="avatar" class="avatar">
+        <h1 class="welcome">Welcome</h1>
+        <div class="menu">
+            <a href="{% url 'about' %}">About Me</a>
+            <a href="{% url 'skills' %}">Skills</a>
+            <a href="{% url 'experience' %}">Experience</a>
+            <a href="{% url 'portfolio' %}">Portfolio</a>
+            <a class="active" href="{% url 'contacts' %}">Contacts</a>
+        </div>
+    </nav>
+    <div class="main">
+        <div class="user">
+            <h3 class="name">Ruslan Korneev</h3>
+            <h3 class="position">Python Developer</h3>
+        </div>
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        <div class="content">
+            <div class="contact">
+                <a href="https://github.com/shaggy-axel">
+                    <img src="{% static 'img/contact/github.png' %}" alt="github" class="contact-logo">
+                </a>
+                <a href="https://t.me/shaggy_axel">
+                    <img src="{% static 'img/contact/telegram.png' %}" alt="telegram" class="contact-logo">
+                </a>
+                <!-- EMAIL FROM -->
+                <div id="fcf-form">                
+                    <form id="fcf-form-id" class="fcf-form-class" method="post" action="contact-form-process.php">
+                        
+                        <div class="fcf-form-group">
+                            <label for="Name" class="fcf-label">Your name</label>
+                            <div class="fcf-input-group">
+                                <input type="text" id="Name" name="Name" class="fcf-form-control" required>
+                            </div>
+                        </div>
+                
+                        <div class="fcf-form-group">
+                            <label for="Email" class="fcf-label">Your email address</label>
+                            <div class="fcf-input-group">
+                                <input type="email" id="Email" name="Email" class="fcf-form-control" required>
+                            </div>
+                        </div>
+                
+                        <div class="fcf-form-group">
+                            <label for="Message" class="fcf-label">Your message</label>
+                            <div class="fcf-input-group">
+                                <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000" required></textarea>
+                            </div>
+                        </div>
+                
+                        <div class="fcf-form-group">
+                            <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Send Message</button>
+                        </div>
+                
+                    </form>
+                </div>
+                <!-- END EMAIL FORM -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,110 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shaggy Axel | Experience</title>
+    <link rel="stylesheet" href='{% static "css/style.css" %}'/>
+    <link rel="stylesheet" href='{% static "css/experience.css" %}'/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <img src="{% static 'img/profile_photo.png' %}" alt="avatar" class="avatar">
+        <h1 class="welcome">Welcome</h1>
+        <div class="menu">
+            <a href="{% url 'about' %}">About Me</a>
+            <a href="{% url 'skills' %}">Skills</a>
+            <a class="active" href="{% url 'experience' %}">Experience</a>
+            <a href="{% url 'portfolio' %}">Portfolio</a>
+            <a href="{% url 'contacts' %}">Contacts</a>
+        </div>
+    </nav>
+    <div class="main">
+        <div class="user">
+            <h3 class="name">Ruslan Korneev</h3>
+            <h3 class="position">Python Developer</h3>
+        </div>
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        <div class="content">
+            <div class="section full-height over-hide px-4 px-sm-0">
+                <div class="container">
+                    <div class="row full-height justify-content-center">
+                        <div class="col-lg-10 col-xl-8 align-self-center padding-tb">
+                            <div class="section mx-auto text-center slider-height-padding">
+                                <!-- pages -->
+                                <input class="checkbox frst" type="radio" id="slide-1" name="slider" checked/>
+                                <label for="slide-1"
+                                    style="background-image: url(
+                                        &quot;{% static 'img/profile_photo.png' %}&quot;);"></label>
+                                <input class="checkbox scnd" type="radio" name="slider" id="slider-2"/>
+                                <label for="slider-2"
+                                    style="background-image: url(
+                                        &quot;{% static 'img/logo/nicecode-logo.jpg' %}&quot;);"></label>
+                                <input class="checkbox thrd" type="radio" name="slider" id="slider-3"/>
+                                <label for="slider-3"
+                                    style="background-image: url(
+                                        &quot;{% static 'img/logo/supplar-logo.jpg' %}&quot;);"></label>
+                                <input class="checkbox foth" type="radio" name="slider" id="slider-4"/>
+                                <label for="slider-4"
+                                    style="background-image: url(
+                                        &quot;{% static 'img/logo/garazh-logo.jpg' %}&quot;);"></label>
+                                <!-- content -->
+                                <ul>
+                                    <li>
+                                        <div class="title">Summary</div>
+                                        <span class="description">
+                                            I gained experience in building a high-quality project from scratch, participated in
+                                            an open source project, which also had a very good effect on my experience.
+                                            Gained experience of working in a large team and alone, or in a team with a frontend developer.
+                                            I have experience teaching children of different ages to the level of a junior trainee,
+                                            therefore I can conduct good code reviews on github.
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <div class="title">NiceCode</div>
+                                        <div class="date">Jan 2021 - Aug 2021</div>
+                                        <span class="description">
+                                            Creating DevOps-Chat-Bots for company, like "System Checker Bot", it check server stats, database dumps,
+                                            web-site availability, deploy statistic-system using Grafana, Prometheus and Django
+                                            Scraping data and parsing
+                                            Working with Django REST Framework in Project RE-Life - Web Application about rehabilitation center
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <div class="title">Supplar</div>
+                                        <div class="date">Aug 2021 - Now</div>
+                                        <span class="description">
+                                            Outsource project
+                                            Build RESTful API, backend from zero for mobile application.
+                                            This is an application for automatically generating a diet for a variety of parameters,
+                                            for example, monthly budget, calories, proteins, fats, carbohydrates.
+                                            A database with a variety of recipes, prices for products that we receive via API,
+                                            the ability to order products through an employee's company
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <div class="title">Corpberry</div>
+                                        <div class="date">Oct 2021 - Mar 2022</div>
+                                        <span class="description">
+                                            Creating API, databases design, Working with AWS S3-Buckets, write scripts to manage data,
+                                            analyze, and deploy in storage, using pandas, gsheets-api etc.
+                                            Write tests for every feature in different projects, worked with someone else's code and fix their bugs.
+                                            Create scraper and parser
+                                            Sometimes make frontend-part, using ReactJS, Material-UI / Bootstrap.
+                                            Can using react-router-dom, jwt-auth in frontend-React and backend-DRF etc.
+                                        </span>
+                                    </li>                            
+                                </ul>
+                            </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
